@@ -9,7 +9,12 @@
 <body>
 <h3> login successful !</h3>
 <%
-User user = (User) session.getAttribute("user"); %>
-Hello<%= user.getUserName() %>!
+//User user = (User) request.getAttribute("user"); 
+
+%>
+<jsp:useBean id="user" class="service.dto.User" scope="request"></jsp:useBean>
+
+<!--  Hello<%= user.getUserName() %>! __-->
+Hello<jsp:getProperty property="userName" name="user"/> !
 </body>
 </html>
