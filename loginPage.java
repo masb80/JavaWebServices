@@ -9,10 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import service.loginService;
+import service.dto.User;
 
-/**
- * Servlet implementation class loginPage
- */
 @WebServlet("/loginPage")
 public class loginPage extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -27,6 +25,8 @@ public class loginPage extends HttpServlet {
 		boolean results = loginService.authenticate(userId, password);
 		
 		if(results){
+			User user = loginService.getUserDetails(userId);
+			request.getSession().setAttribute("user", user);
 			response.sendRedirect("success.jsp");
 			return;
 		}
