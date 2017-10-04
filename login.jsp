@@ -4,12 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>login Page</title>
+<title>Registration Page</title>
 </head>
 <body>
-<form action="loginPage" method="POST">
+<form action="process.jsp" method="post">
 <br>User ID: <input type="text" name="userId" />
-<br>Password: <input type="password" name="password" />
+<br>User Name: <input type="text" name="userName" />
+<br>Address Line 1: <input type="text" name="address1" />
+<br>Address Line 2: <input type="text" name="address2" />
+<br>City: <input type="text" name="city" />
+<br>State: <input type="text" name="state" />
+<br>Pincode: <input type="text" name="pincode" />
 <br><input type="submit" />
 </form>
  </body>
