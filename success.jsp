@@ -13,6 +13,7 @@
 
 %>
 <jsp:useBean id="user" class="service.dto.User" scope="request"></jsp:useBean>
+<jsp:setProperty property="userName" name="user" value="NewUser"/>
 
 <!--  Hello<%= user.getUserName() %>! __-->
 Hello<jsp:getProperty property="userName" name="user"/> !
