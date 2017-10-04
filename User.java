@@ -1,7 +1,8 @@
-package service.dto;
 
+package service.dto;
 public class User {
 	private String userName;
+	private String userId;
 	public String getUserName() {
 		return userName;
 	}
@@ -14,7 +15,7 @@ public class User {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	private String userId;
+	
 	
 
 }
